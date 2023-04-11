@@ -94,31 +94,21 @@ except KeyboardInterrupt:
 help = YELLOW + """\n\t\t-------------- Help ------------------\n
 
     Commands\t\tUse\t\t\t\tExample"""+END+GREEN+"""
-
     l-host\t\tlocal-host <command>\t\tlocal-host ls
-
     download\t\tdownload <file name>\t\tdownload music.mp4
-
     server\t\tserver <IP:PORT>   \t\tserver 127.0.0.1:468
-
     target-ip\t\ttarget-ip             \t\tit shows the target ip
-
-    output_save\t\toutput_save <True/False>\toutput_seve True or output_save False
-
-    
+    output_save\t\toutput_save <True/False>\toutput_seve True or output_save False 
 
     help\t\tit shows this help message
 
     
 
     if you on windows you can reset the password by typing as follows
-
     net user <user name> <new password> example: net user omer password123
 
     
-
     For more information type the name of the command
-
     """ + END
 
 def Help(com):
