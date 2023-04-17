@@ -2,7 +2,7 @@
 Controlling othe pc or phone with python
 __________________________________
 [#] install:<br>
-       ~$git clone https://github.com/omer-devil/netcut-and-reverce_shell/tree/main
+       ~$git clone https://github.com/omer-devil/netcut-and-reverce_shell/tree/main<br>
        and move to the project directory:
              ~$cd netcut-and-reverce_shellh
        now install the requirements.
