@@ -162,7 +162,7 @@ while True:
     
 
     try:
-        com = input(BLUE+"<●"+END+GREEN+"  "+END+YELLOW+"Net-Cat"+END+MAGENTA+"<@>"+END+GREEN+"["+END+MAGENTA+pwd+END+GREEN+"]"+END+BLUE+"> "+END+GREEN)
+        com = input(BLUE+"< ●"+END+GREEN+"  "+END+YELLOW+"Net-Cat"+END+GREEN+" |  | ["+END+MAGENTA+pwd+END+GREEN+"]"+END+BLUE+"> "+END+GREEN)
         """help me"""+END
         if com[:8]=="download":
 
