@@ -20,7 +20,7 @@ ___________________________________
             for .apk use buildozer<br>
      
 [#] all the command available with use and example:<br>
-    Commands.                 Use.                                  Example<br>
+<p>    Commands.                 Use.                                  Example</p><br>
     l-host.                   local-host <command>                  local-host ls<br>
     download.                 download <file name>                  download music.mp4<br>
     server.                   server <IP:PORT>                      server 127.0.0.1:468<br>
