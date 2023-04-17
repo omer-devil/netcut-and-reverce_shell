@@ -18,9 +18,9 @@ ___________________________________
        note:-you can conver reverce_shell.py into .exe file or .apk file<br>
             to conver it to .exe use pyinstaller and<br>
             for .apk use buildozer<br>
-     
+______________________________________
 [#] all the command available with use and example:<br>
-<p>    Commands.                 Use.                                  Example</p><br>
+    Commands.                 Use.                                  Example<br>
     l-host.                   local-host <command>                  local-host ls<br>
     download.                 download <file name>                  download music.mp4<br>
     server.                   server <IP:PORT>                      server 127.0.0.1:468<br>
