@@ -19,7 +19,7 @@ ___________________________________
             to conver it to .exe use pyinstaller and<br>
             for .apk use buildozer<br>
 ______________________________________
-[#] all the command available with use and example:<br>
+[#] all the command availabl in netcut-and-reverce_shellh, with use and example:<br>
     Commands.                 Use.                                  Example<br>
     l-host.                   local-host <command>                  local-host ls<br>
     download.                 download <file name>                  download music.mp4<br>
