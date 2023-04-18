@@ -47,6 +47,7 @@ target-ip <optional_command>: used to return the target ip
 output_save <True|False>    : used to save the received output 
                               command to default file name or 
                               you can changed the file name
+
          example --> output_seve True  : start saving
                      output_seve False : stop saving
 
