@@ -28,3 +28,25 @@ ______________________________________
     output_save.              output_save <True/False>              output_seve True or output_save False<br>
     <br>
     help.                     shows this help message<br>
+
+l-host <commands>     : used to execute command on the local-host
+         example -->  l-host pwd
+                      l-host ls
+download <file_name>  : used to download file,mid,app and other from the target
+         example --> download video.mp4
+                     download music.mp3
+
+server <host:port>    : used to run http server on the target to access target file throughout browser
+         example --> server 127.0.0.1:55555
+         note: it only recommend on the same network
+
+target-ip <optional_command>: used to return the target ip
+         example --> target-ip
+                     target-ip help : help is the only 
+                              optional command available
+output_save <True|False>    : used to save the received output 
+                              command to default file name or 
+                              you can changed the file name
+         example --> output_seve True  : start saving
+                     output_seve False : stop saving
+
